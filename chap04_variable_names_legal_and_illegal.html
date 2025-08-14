@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Variable Names: Legal & Illegal</title>
+</head>
+<body> <h1>chapter 4 ;  Variable Names: Legal & Illegal</h1>
+     <h3>Rules for naming JS variables</h3>
+  <p>Variable names can only contain letters, numbers, $ and _ .</p>
+  <p>For example: <code>$my_1stVariable</code></p>
+  <p>Variables must begin with a letter, $ or _ .</p>
+  <p>For example: <code>$name, _name, name</code></p>
+  <p>Variable names are case sensitive.</p>
+  <p>Variable names should not be JS reserved keywords.</p>
+</body> 
+<script>
+    //  Example 1" Multiple Variable Declaration"
+    let name = "Hafsa", age = 20, city = "Lahore";
+    console.log(name ,age,city);
+
+    // Example 2 " Declare 5 Legal & 5 Illegal Variable Names"
+    //  Legal Names
+    let userName;
+    let _age;
+    let $salary;
+    let myVar123;
+    let totalAmount;
+    
+//  " Illegal Names (These will throw errors)"
+
+//    let 1name;       // starts with number 
+// let full name;   // space not allowed 
+// let @price;      // special character 
+// let var;         // reserved keyword 
+// let user-name;   // hyphen not allowed 
+
+// Example 3 "Display in Browser: Rules for naming JS variables"
+
+    // The idea is to show the rules using HTML structure in the browser.
+//  check the code above in the <body> section.
+
+    </script>
+</html>
