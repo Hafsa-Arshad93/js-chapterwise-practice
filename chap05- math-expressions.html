@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 5: Math Expressions - Familiar Operators</title>
+</head>
+<body>
+    <h1>Chapter 5: Math Expressions - Familiar Operator</h1>
+</body>
+<script>
+    // Example   1
+//  Add Two Numbers
+
+let num1 = 4;
+let  num2 = 5;
+let sum = num1 + num2;
+
+document.write("Sum of " + num1 + " and " + num2 + " is " + sum + "<br>" + "<hr>"); 
+
+
+    // Example 2
+
+     let a = 2;
+     let b = 8;
+     let sums = a + b ;
+     document.write(" Addition of " + a  + " and " + b + " is " + sums + "<br>" + "<hr>")
+  
+  // Example 03 : Subtract, Multiply, Divide, Modulus
+
+  let xyz = 15;
+  let abc = 10;
+
+  let subtraction = xyz + abc ;
+  let multiplication = xyz * abc;
+  let division =  xyz / abc;
+  let modulus =  xyz % abc;
+
+    document.write(" Subtraction:" + subtraction + "<br>");
+    document.write("Multiplication :" + multiplication + "<br>" );
+    document.write("Division :" + division + "<br>");
+    document.write("Modulus :" + modulus + "<br>" + "<hr>");
+
+    // Example : 4  Variable Operations (Increment, Add, Decrement, Modulus)
+
+
+    let number ; // declared but not given value
+
+    document.write( " Declared value = " + number + "<br>");
+    number = 5;
+   document.write("Initial value = ", number + "<br>");
+
+    number++;
+   document.write( "After increment = ", number + "<br>");
+    number = number + 7;
+    document.write("After adding 7 = ", number + "<br>"); 
+    number--;
+   document.write("After decrement = " +number + "<br>");
+    let mdulus = number % 3 ;
+    document.write("Remainder when divided by 3 = " + mdulus + "<hr>" + "<br>" );
+
+    //  Exampple 5  
+    //  Simple Multiplication (Real World: Movie Ticket)
+
+let ticketPrice = 600;
+let quantity = 5;
+let total = ticketPrice * quantity;
+
+document.write("Price of one ticket: Rs. " + ticketPrice  + "<br>");
+document.write("Buying " + quantity + " tickets" + "<br>");
+document.write("Total cost: Rs. " + total + "<br>" + "<hr>");
+
+// Example 6 
+//  Multiplication Table using 'for loop'
+
+let table = 4;
+for (let i = 1 ;i <= 10;i++ ) {
+ document.write(table +"x" + i + "=" + (table * i ) + "<br>" ) ;
+};
+document.write("<hr>")
+    
+// Example 7  Temperature Conversion(a)
+let celcius = 37;
+let cTof = (celcius * 9/5) + 32;
+console.log(celcius +"°C is equal to   " + cTof + "°F"); 
+document.write(celcius +"°C =  " + cTof + "°F" + "<br>" ); //to show in browser
+
+// Temperature Conversion(b)
+let  Fahrenheit  = 98.6;
+let fToc = (Fahrenheit - 32) *5/9;
+console.log(Fahrenheit +"°F = " + fToc + " °C" );
+document.write(Fahrenheit +"°F = " + fToc + " °C "+ "<br>" + "<hr>"); 
+
+
+// Example 8 
+            //  Shopping Cart Total
+
+let priceProduct1 = 50;
+let priceProduct2 = 40;
+let quantityProduct1 = 2;
+let quantityProduct2 = 4;
+let shippingCharges =  250;
+let total1 = (priceProduct1 * quantityProduct1) + (priceProduct2 * quantityProduct2)  + shippingCharges;
+
+
+document.write("Price of product 1 : "+ priceProduct1 + "<br>");
+document.write("Quantity of product 1 : " + quantityProduct1 + "<br>");
+document.write("Price of product 2 : "+ priceProduct2 + "<br>");
+document.write("Quantity of product 2 : "+ quantityProduct2 + "<br>" );
+document.write("Total cost :" + total1 + "<hr>" );
+
+// Example 9  
+         //  Mark Sheet (Total & Percentage)
+let totalMarks = 550;
+let obtainedMarks = 464;
+let percentage = (obtainedMarks/totalMarks) * 100;
+document.write("Total marks = " + totalMarks + "<br>" );
+document.write("Obtained marks  = " + obtainedMarks + "<br>" );
+document.write("Percentage  =" + percentage + "<br>" + "<hr> ");
+
+// Example 10 
+            // Currency in PKR
+let oneUsdtoPkr = 104.80;
+let oneRiyaltoPkr =  28;
+
+let conversion = (oneUsdtoPkr *10) + (oneRiyaltoPkr* 25);
+document.write("Total currency in  Pkr:" +conversion + "<hr>");
+
+//  Example 11
+              // : One Expression, Multiple Operations  
+  let result = ((5 + 5) * 10) / 2;
+document.write("Result: " + result + "<hr>");
+
+// Example 12
+    //    Age calculator
+
+    let currentYear = 2025;
+    let birthYear = 2002;
+    let yourAge = (currentYear-birthYear);
+    document.write("Current Year is :" + currentYear + "<br>");
+     document.write("Birth Year is :" + birthYear + "<br>");
+    document.write("Your Age is : "  + yourAge +"<br>" +"<hr>")
+
+
+// Example 13
+        //    The Geometrizer
+        let radius = 20;
+        let pi = 3.142;
+        let circumference = 2 * pi * radius;
+         let area = pi * radius * radius;
+
+         document.write("Radius  of circle is : " + radius  +"<br>" );
+         document.write("Circumference of circle is  : " + circumference +"<br>" );
+          document.write("Area of circle is : " + area +"<br>" +"<hr>");
+
+
+// Example 14
+    //   Lifetime Supply Calculator
+
+    let favoriteSnack =" noodles";
+    let currentAge = 23;
+    let maxAge = 64;
+    let snackPerDay = 2;
+
+    let totalNeeded = (maxAge - currentAge) * 365 * snackPerDay;
+document.write("Favorite Snack: " + favoriteSnack +"<br>");
+document.write("Current Age: " + currentAge +"<br>");
+document.write("Estimated Max Age: " + maxAge +"<br>");
+document.write("Amount per day: " + snackPerDay +"<br>");
+document.write("You will need " + totalNeeded + " " + favoriteSnack + "s to last you until the age of " + maxAge +"<br>" +"<hr>");
+
+
+                           // The End 
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
