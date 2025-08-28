@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Question 1 -->
+   <h2>Signup Form</h2>
+  
+  <!-- Form -->
+  <form onsubmit="showData(event)">
+    <input type="text" id="name" placeholder="Enter Name" required><br><br>
+    <input type="email" id="email" placeholder="Enter Email" required><br><br>
+    <input type="password" id="password" placeholder="Enter Password" required><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+<!-- Question: Q2 -->
+    <h2>Item Details</h2>
+  <p>
+    This is the short detail.
+    <span id="moreText" style="display:none;">
+      This is the full detail that was hidden before. It only appears when you click "Read More".
+    </span>
+  </p>
+
+  <button onclick="showMore()">Read More</button>
+</body>
+<script>
+  // Question 1: (Chapter 49: Reading and Setting Field Values)
+// Create a signup form and display form data in your web page on submission. 
+
+    function showData(event) {
+     let E = event.preventDefault(); // Stop page from refreshing
+
+      // Step 1: get values from inputs
+      let name = document.getElementById("name").value;
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+//step 02: To show in browser 
+      let para = document.createElement("p");
+    // Add text to paragraph
+      para.innerHTML = ("Name: " + name + "<br>" +"Email: " + email + "<br>" + "Password: " + password);
+
+      // Append this paragraph to the body
+      document.body.appendChild(para);
+    };
+
+//     Question: Q2
+//  Suppose in your webpage there is a content area in which you have entered your item details,
+//   but the user can only see some details on first look. When user clicks on “Read more” button,
+//    full detail of that particular item will be displayed.
+function showMore() {
+      let moreText = document.getElementById("moreText");
+      moreText.style.display = "inline";  // show hidden text
+    }
+</script>
+</html>

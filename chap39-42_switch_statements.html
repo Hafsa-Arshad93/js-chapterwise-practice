@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- CHAPTER 38-TO-42 -->
+    <!-- FUNCTIONS, SWITCH STATEMENTS, WHILE… - DO WHILE LOOPS  -->
+</body>
+<script>
+// Question 1. Power Function
+
+function power(a, b) {
+  return a ** b;  // exponent operator
+}
+console.log(power(2, 3)); // 8
+
+// Question 2: Leap Year Function
+
+function isLeapYear(year) {
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(isLeapYear(2026)); // true
+
+// Question 3: Triangle Area (Heron’s Formula)
+
+function calculateArea(a, b, c) {
+  let S = (a + b + c) / 2;  
+  let area = Math.sqrt(S * (S - a) * (S - b) * (S - c));
+  return area;
+}
+console.log(calculateArea(3, 4, 5)); // 6
+
+//  Question 4.
+//  Write a function that receives marks received by a student in 3  subjects and returns
+//  the average and percentage of these marks. there should be 3 functions one is the
+//  mainFunction  and other are for average and percentage. Call those functions  from 
+// mainFunction and display result in mainFunction. 
+
+function average(m1,m2,m3) {
+    return (m1 +m2 +m3)/3
+}
+function percentage(m1,m2,m3) {
+    let total = m1+m2+m3
+     return (total / 300) * 100; 
+}
+function mainFunction(m1,m2,m3) {
+    let avg = average(m1,m2,m3)
+    let per = percentage(m1,m2,m3)
+    return [avg ,per];   
+}
+let result = mainFunction(80,90,70);
+document.write("Average: " + result[0] + "<br>");
+document.write("Percentage: " + result[1] + "%");
+
+//           Question 5. You have learned the function indexOf. Code your own custom function
+//  that will perform the same functionality. You can code for single character as of now. 
+//      Topic : Custom indexOf Function
+
+function customIndexOf(str, char) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      return i;   // position mil gayi
+    }
+  }
+  return -1;
+};
+let functionCall = customIndexOf("Hemoglobin","z")
+console.log(functionCall);
+
+// Question 6.
+//  Write a function to delete all vowels from a sentence. Assume that the sentence
+//  is not more than 25 characters long. 
+
+function removeVowels(sentence) {
+  return sentence.replace(/[aeiouAEIOU]/g, "*"); 
+}
+console.log(removeVowels("Hello World"));  
+// Output should be Hll Wrld
+
+// Alternative (Loop se)
+
+function removeVowels(sentence) {
+  let result = "";
+  for (let i = 0; i < sentence.length; i++) {
+    let char = sentence[i].toLowerCase();
+    if (!(char === "a" || char === "e" || char === "i" || char === "o" || char === "u")) {
+      result += sentence[i];
+    }
+  }
+  return result;
+}
+
+console.log(removeVowels("Pleases read this application and give me gratuity"));
+// Output: Plss rd th pplctn nd gv m grtty
+
+
+// Question 7
+function countDoubleVowels(text) {
+  let count = 0;
+
+  for (let i = 0; i < text.length - 1; i++) {
+    let pair = text[i] + text[i + 1]; // do consecutive letters
+
+    switch (pair.toLowerCase()) {
+      case "aa": case "ae": case "ai": case "ao": case "au":
+      case "ea": case "ee": case "ei": case "eo": case "eu":
+      case "ia": case "ie": case "ii": case "io": case "iu":
+      case "oa": case "oe": case "oi": case "oo": case "ou":
+      case "ua": case "ue": case "ui": case "uo": case "uu":
+        count++;
+        break;
+    }
+  }
+
+  return count;
+}
+
+console.log(countDoubleVowels("Pleases read this application and give me gratuity"));
+// Output: 3
+
+
+//     Question8. 
+// Distance → meter, feet, inches, centimeters.Write a program that inputs the distance between
+//  two cities (in km) and converts it into meters,feet, inches and centimeters.
+
+function convertDistance(km) {
+  let meters = km * 1000;        // 1 km = 1000 m
+  let feet = km * 3280.84;       // 1 km = 3280.84 feet
+  let inches = km * 39370.1;     // 1 km = 39370.1 inches
+  let centimeters = km * 100000; // 1 km = 100,000 cm
+
+  console.log("Distance in meters: " + meters);
+  console.log("Distance in feet: " + feet);
+  console.log("Distance in inches: " + inches);
+  console.log("Distance in centimeters: " + centimeters);
+}
+
+convertDistance(5);  // Example: 5 km
+
+//        Question 9.
+//  Overtime Pay Calculation
+
+// Suppose the basic salary of an employee is fixed.If the employee works more than 40 hours,
+//  he gets paid overtime Rs. 12 per hour.Write a program to calculate the overtime pay of
+//  employees.
+
+
+function calculateOvertime(hoursWorked) {
+  let overtimeRate = 120;   // Rs.12 per extra hour
+  let overtimeHours = 0;
+  let overtimePay = 0;
+
+  if (hoursWorked > 40) {
+    overtimeHours = hoursWorked - 40;    // extra hours
+    overtimePay = overtimeHours * overtimeRate;
+  }
+
+  console.log("Overtime Hours: " + overtimeHours);
+  console.log("Overtime Pay: Rs. " + overtimePay);
+}
+calculateOvertime(60);
+
+//      Question 10
+// A cashier has currency notes of denominations 10, 50 and 
+// 100. If the amount to be withdrawn is input through the 
+// keyboard in hundreds, find the total number of currency notes 
+// of each denomination the cashier will have to give to the withdrawer. 
+
+function currencyNotes(amount) {
+  let hundred = Math.floor(amount / 100); 
+  let fifty = Math.floor((amount % 100) / 50);  
+  let ten = Math.floor(((amount % 100) % 50) / 10); 
+
+  console.log("100 rupee notes: " + hundred);
+  console.log("50 rupee notes: " + fifty);
+  console.log("10 rupee notes: " + ten);
+}
+
+currencyNotes(760);
+</script>
+</html>

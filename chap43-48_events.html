@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- CHAPTER 43-TO-48 -->
+             <!-- EVENTS-->
+<!-- Events are actions or happenings in the browser that JavaScript can respond to -->
+     
+     <!-- Example 1 -->
+     <a href="#" onclick="showMessage()">Click Me</a>
+
+      <!-- Example 2 -->
+  <h2>Choose Your Mobile</h2>
+<img src="mobile.jpeg" onclick="showAlert('Mobile A')" alt="">
+<img src="mobile.jpeg" onclick="showAlert('Mobile B')" alt="">
+<img src="mobile.jpeg" onclick="showAlert('Mobile C')" alt="">
+
+    <!-- Example 3 -->
+ <table border="1" id="studentTable">
+    <tr>
+      <th>Name</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td>Ali</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Sara</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+    <tr>
+      <td>Ahmed</td>
+      <td><button onclick="deleteRow(this)">Delete</button></td>
+    </tr>
+  </table>
+
+    <!-- Example :4 -->
+  
+    <h2>Hover over the image 👇</h2>
+    <img src="mobile.jpeg" id="myImage" onmouseover="changePic()" onmouseout="resetImage()">
+  
+         <!-- Example 5 -->
+     <h2>Counter Example</h2>
+
+  <!-- Counter display -->
+  <p id="counterValue">0</p>
+
+  <!-- Buttons -->
+  <button onclick="increaseCounter()">Increase</button>
+  <button onclick="decreaseCounter()">Decrease</button>
+</body>
+<script>  //Example 1
+    // : Show an alert box on click on a link
+      function showMessage() {
+      alert("Hello! You clicked the link.");
+    }
+    //   Example 2: Display Mobile Images & Show Alert on Click
+    //   Event: onclick on images
+
+
+    function showAlert(mobileName) {
+      alert("You clicked on " + mobileName);
+    }
+       
+// Example 3: Student Records Table with Delete Button
+
+        function deleteRow(button) {
+      let row = button.parentNode.parentNode; 
+      row.remove(); // delete row
+    }
+//  Example 4: 
+
+// Display an image in browser. Change the picture on mouseover and set the
+//  first picture on mouseout.
+ let image = document.getElementById("myImage");
+ function changePic() {
+    image.src = "mobile2.jpeg";  
+ }
+  function resetImage() {
+      image.src = "mobile.jpeg";  
+    
+    };
+
+
+         //  Example 5 
+//          Show a counter in browser. Counter should increase on click on increase 
+// button and decrease on click on decrease button. And show updated counter value in browser.
+   
+    let counterDisplay = document.getElementById("counterValue");
+    let count = 0;
+    function increaseCounter() {
+      count++;  
+      counterDisplay.textContent = count; 
+    }
+
+    
+    function decreaseCounter() {
+      count--;   
+      counterDisplay.textContent = count; 
+    };
+    
+
+</script>
+</html>
