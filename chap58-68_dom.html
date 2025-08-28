@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+  <h1> DOM </h1>
+  <div id="form-content" class="content">
+
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" />
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" />
+    <label for="email">Email</label>
+    <input type="text" id="email" />
+
+  </div>
+  <div id="main-content" class="content">
+
+    <p class="render"> First Name : Alex</p>
+    <p class="render" id="lastName">Last Name: Bank</p>
+    <p class="render"> Email : alexbank@example.com</p>
+    <p class="render"> Country : Pakistan </p>
+    <p class="render"> contact : +92 300 1234567</p>
+
+  </div>
+</div>
+
+</body> 
+<script>
+ // Chapter 58-68 :   DOM
+
+// The DOM (Document Object Model) is a tree-like structure created by the browser from 
+// your HTML document. It acts as a bridge between HTML and JavaScript, allowing JavaScript 
+// to access and manipulate the content, structure, and styles of the webpage.
+
+    //  Topic: DOM Selection & Manipulation
+    //        Question 1
+//    Part (i) → Get element of id “main-content” and assign it in a variable
+
+    let mainContent = document.getElementById("main-content");
+     console.log(mainContent);
+
+    //  Part (ii) → Display all child elements of “main-content” element
+    let children = mainContent.children;
+     console.log(children);
+// .children gives a list of all child elements of main-content.
+
+// Part (iii) → Get all elements of class “render” and show their innerHTML
+let renderElements = document.getElementsByClassName("render");
+
+for (let i = 0; i < renderElements.length; i++) {
+  console.log(renderElements[i].innerHTML);
+}
+
+// Part (iv) → Fill input value whose element id = “first-name” using JS
+document.getElementById("first-name").value = "Alex";
+
+// Part (v) → Repeat for “last-name” and “email”
+document.getElementById("last-name").value = "Bank";
+document.getElementById("email").value = "alexbank@example.com";
+
+// Question 2
+// Topic: DOM Node Properties
+
+// Part (i) → What is node type of element having id "form-content"?
+let formContent = document.getElementById("form-content");
+console.log(formContent.nodeType);
+
+// Part (ii) → Show node type of element having id "lastName" and its child node
+let lastName = document.getElementById("lastName");
+console.log(lastName.nodeType);        // Node type of element
+console.log(lastName.firstChild.nodeType); // Node type of its text
+
+// Part (iii) → Update child node of element having id "lastName"
+lastName.firstChild.nodeValue = "Last Name: Johnson";
+
+// Part (iv) → Get first and last child of id "main-content"
+
+let mainContent1 = document.getElementById("main-content");
+console.log(mainContent1.firstChild);  // first child (could be text)
+console.log(mainContent1.lastChild);   // last child (could be text)
+
+// Part (v) → Get next and previous siblings of id "lastName"
+
+console.log(lastName.nextSibling);      // next node
+console.log(lastName.previousSibling);  // previous node
+
+// Part (vi) → Get parent node and node type of element having id "email"
+let emailInput = document.getElementById("email");
+console.log(emailInput.parentNode);       // parent node
+console.log(emailInput.parentNode.nodeType); // type of parent
+
+//    Summary of Question 2 (DOM Node Properties):
+// .nodeType --> tells if it’s element (1) or text (3).
+// .firstChild / .lastChild -- gives first/last node inside.
+// .nextSibling / .previousSibling -- moves between nodes at the same level.
+// .parentNode --> finds the parent container.
+// .nodeValue --> can change the text inside a node.
+
+</script>
+</html>

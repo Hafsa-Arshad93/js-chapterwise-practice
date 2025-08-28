@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="personForm">
+  <input type="text" id="name" placeholder="Enter Name" /><br><br>
+  <input type="text" id="address" placeholder="Enter Address" /><br><br>
+
+  <!-- Gender using radio buttons -->
+  Gender:
+  <input type="radio" name="gender" value="Male"> Male
+  <input type="radio" name="gender" value="Female"> Female
+  <br><br>
+
+  <!-- Education using dropdown -->
+  Education:
+  <select id="education">
+    <option value="Matric">Matric</option>
+    <option value="Intermediate">Intermediate</option>
+    <option value="Graduate">Graduate</option>
+  </select>
+  <br><br>
+
+  <!-- Profession using dropdown -->
+  Profession:
+  <select id="profession">
+    <option value="Student">Student</option>
+    <option value="Teacher">Teacher</option>
+    <option value="Engineer">Engineer</option>
+  </select>
+  <br><br>
+
+  <button type="button" onclick="savePerson()">Save Record</button>
+</form>
+
+    
+</body>
+<script>   
+// Topic: Objects inside an Array
+//       Question 1:
+//     We have an array of objects:We need to:
+//      Calculate the total price of each item (price × quantity).
+//      Calculate the total price of all items.
+
+var itemsArray = [
+  { name: "juice", price: "50", quantity: "3" },
+  { name: "cookie", price: "30", quantity: "9" },
+  { name: "shirt", price: "880", quantity: "1" },
+  { name: "pen", price: "100", quantity: "2" }
+];
+let grandTotal = 0;
+for (let i = 0; i < itemsArray.length; i++) {
+  let item = itemsArray[i];
+  let total = item.price * item.quantity;
+   grandTotal += total;
+  console.log(item.name + " total price = " + total);
+}
+console.log("Grand Total = " + grandTotal);
+
+
+// Topic: Creating an Object & Checking Properties
+//    Question 2
+
+// Create an object with properties:
+// name, email, password, age, gender, city, country.
+// Then:
+// Check if age and country exist in the object.
+// Check if firstName and lastName exist.
+
+let user = {
+  name: "Hafsa",
+  email: "hafsa@example.com",
+  password: "12345",
+  age: 22,
+  gender: "Female",
+  city: "Karachi",
+  country: "Pakistan"
+};
+console.log("age" in user);        // true
+console.log("country" in user);    // true
+console.log("firstName" in user);  // false
+console.log("lastName" in user);   // false
+        //    OR
+console.log(user.hasOwnProperty("age"));       // true
+console.log(user.hasOwnProperty("country"));   // true
+console.log(user.hasOwnProperty("firstName")); // false
+console.log(user.hasOwnProperty("lastName"));  // false
+// This works the same way but is a method of the object.
+
+//         Topic: Constructor Functions
+//    Question 3
+//    Create a constructor function with some properties.
+//   Then use it to create multiple records (objects).
+function Student(name, age, city) {
+  this.name = name;
+  this.age = age;
+  this.city = city;
+}
+let student1 = new Student("Ali", 20, "Karachi");
+let student2 = new Student("Sara", 22, "Lahore");
+let student3 = new Student("Hafsa", 21, "Islamabad");
+console.log(student1);
+console.log(student2);
+console.log(student3);
+
+// Topic: Constructor Function for Population Records
+// Question 4:
+// We want to store population details (like a mini database).
+ 
+function savePerson() {
+  // 1. Get values from form
+  let name = document.getElementById("name").value;
+  let address = document.getElementById("address").value;
+  let gender = document.querySelector('input[name="gender"]:checked').value;
+  let education = document.getElementById("education").value;
+  let profession = document.getElementById("profession").value;
+
+function Person(name, gender, address, education, profession) {
+  this.name = name;
+  this.gender = gender;
+  this.address = address;
+  this.education = education;
+  this.profession = profession;
+}
+  // 2. Create new record using Constructor (inside function!)
+  let person = new Person(name, gender, address, education, profession);
+console.log(person); // show in console
+
+  // 3. Get old records OR make new empty array
+let people = JSON.parse(localStorage.getItem("people")) || [];
+  // 4. Add new person to array
+people.push(person);
+
+// / 5. Save updated array back to localStorage
+  localStorage.setItem("people", JSON.stringify(people));
+
+  alert("Record saved successfully!");
+}
+
+
+
+
+
+
+
+
+
+</script>
+</html>
