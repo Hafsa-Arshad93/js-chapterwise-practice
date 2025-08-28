@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter:12-13</title>
+</head>
+<body>
+    
+</body>
+<script>
+         //  Chapter: 12-13
+//      IF…ELSE & ELSE IF STATEMENT, TESTING SET OF CONDITIONS 
+
+//  Example: Write a program that takes a character (number or string) in a
+//  variable & checks whether the given input is a number, uppercase 
+// letter or lower case letter. (Hint: ASCII codes:- A=65, Z=90, a=97, z=122).
+
+let txt;
+let input = prompt("Enter One Character:");
+if (!input || input.length !== 1) { //ya user ne kuch type ni kiya ya iski lenghth 1 se ziada hai 
+    txt = "Please enter exactly ONE character."
+}
+
+else if (input.charCodeAt(0) >= 48 && input.charCodeAt (0)<= 57) {
+   
+     txt = "It is a NUMBER (0–9)."
+}
+else if (input.charCodeAt(0) >= 65 && input.charCodeAt(0) <= 90) {
+      txt = "It is an UPPERCASE letter (A-Z).";
+} 
+else if (input.charCodeAt(0) >= 97 && input.charCodeAt(0) <= 122) {
+        txt = "It is a LOWERCASE letter (a–z).";
+}
+ else {
+     txt = "It is something else (symbol, space, etc.).";
+ }
+alert( txt);
+
+//    Example 2 :Write a JavaScript program that accept two integers and 
+// display the larger. Also show if the two integers are equal. 
+
+let num1 = +prompt("Enter 1st Number");
+let num2 = +prompt("Enter 2nd Number");
+let res;
+if (num1 > num2) {
+    res = "num1 is larger"
+    }
+    else if (num2 > num1 ) {
+         res = "num2 is larger"
+    }
+else {
+   res = " both numbers  are equal"
+}
+alert(res);
+
+// Example 3: . Write a program that takes input a number from user & 
+// state whether the number is positive, negative or zero. 
+
+let user1 =  +prompt("Enter number");
+
+if (user1 > 0) {
+    alert("the number is positive");
+}
+else if (user1 < 0 ) {
+    alert("the number is negative");
+    
+}
+else   {
+    alert("the number is zero")
+    
+}
+//  Example 4. 
+// Write a program that takes a character (i.e. string of length 1) and returns
+//  true if it is a vowel, false otherwise .
+
+let users = prompt("Enter any character ");
+if (!users ||users.length !== 1) {
+    alert("Please enter only ONE character.")   
+}
+else if (users.toLowerCase() === "a"|| users.toLowerCase() === "e "|| users.toLowerCase()  ==="i"|| users.toLowerCase() ==="o"|| users.toLowerCase()==="u") {
+    alert("true")
+}
+else{
+    alert("false ")
+}
+
+
+     //  Example 5 
+//      Write a program that 
+// a. Store correct password in a JS variable. 
+// b.  Asks user to enter his/her password 
+// c.  Validate the two passwords: 
+// i. Check if user has entered password. If not, then give message “ Please enter your password” 
+// ii. Check if both passwords are same. If they are same, show message “Correct! The password you 
+// entered matches the original password”. Show “Incorrect password” otherwise.  
+
+let correctPassword = "heart.pngslash";
+let user = prompt("Enter password");
+if (!user) {
+    alert("Please enter your password")
+    
+}
+else if (correctPassword === user) {
+    alert("Correct! The password you  entered matches the original password")
+}
+else { 
+    alert("Incorrect password")
+
+}
+
+//  Example 6
+
+let greeting 
+let hour = prompt("Enter Current Hour") ;
+if (hour < 18) { 
+greeting = "Good day"
+}
+else {
+greeting = "Good evening"; 
+}
+alert(greeting);
+
+//  Example 7
+//  Write a program that takes time as input from user in 24 hours clock 
+//  format like: 1900 = 7pm. Implement the following case using 
+//  if, else & else if statements
+let messge;
+let input1 = prompt("Enter time in 24-hour format (e.g., 1900):");
+if (!input1 || input1.length !== 4 ) {
+    messge = "ERROR!"
+}
+else if ( input1 >= 0 &&  input1 <= 1159) {
+    messge = "Good morning";
+}
+else if ( input1 >= 1200  &&  input1 <= 1659) {
+    messge = "Good afternoon";
+}
+else if ( input1 >= 1700  &&  input1 <= 2059) {
+    messge = "Good evening";
+}
+else if ( input1 >= 2100 &&  input1 <= 2359) {
+    messge = "Good night";
+}
+else{
+    messge= "Invalid time Entered"
+}
+alert(messge);
+
+
+   //THE END
+
+
+</script>
+</html>

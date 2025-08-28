@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    </body>
+<script>    // Chapter 21 to 25 
+             // STRING METHODS
+
+    // Q1: Merge first & last name
+//     let name = prompt("Enter your first name")
+//     let lastName = prompt("Enter your last name");         
+// let fullName = "Hello " + name + " "+ lastName;
+
+// alert(fullName);
+     // Question 2.   
+//  Write a program to take a user input about his favorite mobile phone model. 
+//  Find and display the length of user input in your browser
+
+// let phone = prompt("Enter your favorite mobile phone model:");
+// document.write("My favorite phone is: " + phone + "<br>");
+// document.write("Length of string: " + phone.length +"<br>");
+
+     // Question 3.   
+//  Write a program to find the index of letter “n” in the word 
+// “Pakistani” and display the result in your browser .
+
+let name1 =  "Pakistani";
+let findIndex = name1.indexOf("n");
+document.write("Index of n : "  + findIndex +"<br>");
+
+  // Question 4.   
+    // Write a program to find the last index of letter “l” in the word 
+    // “Hello World” and display the result in your browser. 
+
+let name2 = "Hello World";
+let lastIndex = name2.lastIndexOf("l");
+document.write("Index of l: "+ lastIndex +"<br>");
+
+            // Question 5.
+    //  Write a program to find the character at 3rd index in the word
+    //  “Pakistani” and display the result in your browser.
+
+let text = "Pakistani";
+let findChar = text.charAt(3);
+document.write("Character at 3rd index: "+ findChar +"<br>");
+
+
+      // Question 6. Repeat Q1 using string concat() method.   
+
+// let firstName = prompt("Enter your first name:");
+// let lastName = prompt("Enter your last name:");
+// let fullName = firstName.concat(" ", lastName);
+// alert("Hello " + fullName );
+
+      // Question 7. 
+      // Write a program to replace the “Hyder” to “Islam” in the word 
+      // “Hyderabad” and display the result in your browser.
+       let city = "Hyderabad ";
+       let newCity = city.replace("Hyder", "Islam")
+       document.write("City: " + city + "<br>");
+      document.write("After replacement: " + newCity +"<br>" );
+
+                 // Question 8.
+      //  Write a program to replace all occurrences of “and” in the string
+      //  with “&” and display the result in your browser. 
+      // var message = “Ali and Sami are best friends. They play cricket and football together.”; 
+      
+let messge  = "Ali and Sami are best friends. They play cricket and football together; "
+
+let replacement = messge.replace(/and/g,"&");
+document.write("After replacement :" + replacement +"<br>");
+
+          // Question 9.   
+//  Write a program that converts a string “472” to a number 472. Display the
+//   values & types in your browser.
+
+
+let str = "472";
+let num = +(str);
+document.write("Value: " + str + " (type: " + typeof str +  ")" + "<br>");
+document.write("Value:" + num + "(Type:" + typeof num + ")" +"<br>");
+
+
+      // Question 10: Convert user input to capital letters
+
+    //   let input = prompt("Enter some text:");
+    //   let upperCase = input.toUpperCase();
+    //   document.write("User Input: " + input + "<br>");
+    //   document.write("Upper Case: " + upperCase +"<br>");
+      
+         // Question 11. 
+//  Write a program that takes user input. Convert and show the input in title case.    
+
+// let input1 = prompt("Enter a word")
+// let titleCase = input1.charAt(0).toUpperCase() + input1.slice(1).toLowerCase()
+// document.write("titleCase " + titleCase +"<br>");
+
+         // Question 12.
+        
+// 12. Write a program that converts the variable num to string. var num = 35.36 ; 
+// Remove the dot to display “3536” display in your browser. 
+
+         let number = 35.36;
+         let string = number.toString()
+         let withOut = string.replace(".","")
+         let strToNum = Number(withOut)
+        document.write("Number: " + number + "(Type :" + typeof number + ")" + "<br>");
+        document.write("Without dot :" + withOut + "(Type :" + typeof withOut + ")" + "<br>") 
+         document.write("String to Again number but without decimal :" + strToNum + "(Type :" + typeof strToNum + ")" + "<br>") 
+
+
+         // Question 13. 
+      //Write a program to take user input and store username 
+    //  in a variable. If the username contains any special symbol among [@ . , !], 
+    // prompt the user to enter a valid username. For character codes of [@ .
+
+//     let input2 = prompt("Enter Username");
+//     let invalidChars = ["@", ".", ",", "!"];
+//     let messg = true;
+
+//  for (let i = 0; i < invalidChars.length; i++) {
+//    if (input2.includes (invalidChars[i])) {
+//             messg = false; 
+//             ;
+//     }
+//     }
+//     if (messg) {
+//     alert("Correct Username: " + input2);}
+    
+//     else { 
+//         alert("Invalid Username! Please enter again without @ . , !")
+
+//     }
+
+            //  Question 14:
+//  You have an array 
+// A = [cake”, “apple pie”, “cookie”, “chips”, “patties”] 
+// Write a program to enable “search by user input” in an array. After searching, prompt the user whether the given 
+// item is found in the list or not. Note: Perform case insensitive search. Whether the user 
+// enters cookie, Cookie, COOKIE or coOkIE, program should inform about its availability. 
+         
+// let array = ["cake","appple", "pie","cookie","chips","patties"];
+// let input3 = prompt("Enter item of your choice").toLowerCase();
+// let valid = false;
+//  for (let i = 0; i < array.length; i++) {
+//     if (input3 === array[i].toLowerCase()) {
+//         valid= true;
+//         break;
+//     }
+    
+//  }
+//  if (valid === true) {
+//   alert( " Yes , we have this item ")
+    
+//  }
+//  else{
+//     alert( " NO , We don't have this item ")
+//  } 
+ 
+           
+         // Question 15
+
+    //  Write a program to display the last character of a user input. 
+//   let userInput = prompt("Enter some text:");
+//  let lastChar = userInput.charAt(userInput.length - 1);
+                        // OR
+//   let lastChar = userInput.slice(-1)
+//  document.write("User Input: " + userInput + "<br>");
+//  document.write("Last Character: " + lastChar);
+         
+//             // Question 16.
+    //  You have a string “The quick brown fox jumps over the lazy dog”. Write a
+    //  program to count number of occurrences of word “the” in given string. 
+
+        let text1 = "The quick brown fox jumps over the lazy dog";
+        let words = text1.toLowerCase().split(" ")
+        let count = 0;
+        
+      for (let i = 0; i < words.length; i++) {
+      if (words[i] === "the") {
+        count++;
+    }
+}
+
+   document.write("Text: " + text1 + "<br>");
+     document.write("Number of occurrences of 'the': " + count);
+
+
+          // Question 17. 
+// Write a program to convert the following string to an array using string split method. 
+// var university = “University of Karachi”; Display the elements of array in your browser. 
+
+    let university =" University of Karachi";
+    let arr = university.split("");
+     for (let i = 0; i < arr.length; i++) {
+    document.write(arr[i] + "<br>");
+}
+          // Question 18. 
+//Write a program to take password as an input from user. The password must qualify these requirements: 
+//    a. It should contain alphabets and numbers 
+//    b. It should not start with a number 
+//    c. It must at least 6 characters long 
+//If the password does not meet above requirements, prompt the user to enter a valid
+//password. For character codes of a-z, A-Z & 0-9, refer to ASCII table at the end of this document. 
+      
+// let password = prompt("Enter your password:");
+// let valid = false;
+
+// // Condition a: Must contain alphabets and numbers
+// let hasLetter = false;
+// let hasNumber = false;
+
+// for (let i = 0; i < password.length; i++) {
+//   let code = password.charCodeAt(i);
+//   if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
+//     hasLetter = true; // a-z or A-Z
+//   }
+//   if (code >= 48 && code <= 57) {
+//     hasNumber = true; // 0-9
+//   }
+// }
+
+// // Condition b: Should not start with number
+// let firstCharCode = password.charCodeAt(0);
+// let startsWithNumber = (firstCharCode >= 48 && firstCharCode <= 57);
+
+// // Condition c: At least 6 characters long
+// let lengthCheck = (password.length >= 6);
+
+// // Now final check
+// if (hasLetter && hasNumber && !startsWithNumber && lengthCheck) {
+//   valid = true;
+// }
+
+// if (valid) {
+//   alert("Password is valid ✅");
+// } else {
+//   alert("Password is invalid ❌. Please enter a valid password.");
+// }
+
+
+// 🔹 charAt → character (string)
+// 🔹 charCodeAt → ASCII number
+
+let password = prompt("Enter Your Password");
+let valid = false;
+// Condition a: Must contain alphabets and numbers
+let alphabets = false;
+let numbers = false;
+            ///000001
+
+for (let i = 0; i < password.length; i++) {
+    let code = password.charCodeAt(i)
+    if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)){
+        alphabets = true;
+    }     //00002
+    if (code >= 48 && code <= 57) {
+      numbers = true; // 0-9
+  }
+}
+                  ///00003
+    // Condition b: Should not start with number
+let firstCharCode = password.charCodeAt(0) ;
+let NotstartsWithNumber = (firstCharCode < 48 || firstCharCode > 57);
+
+//00004
+// c. It must at least 6 characters long
+let passwordLength = password.length >=6
+
+// final check 
+if ( alphabets && numbers && NotstartsWithNumber && passwordLength ) {
+    valid = true
+    
+}
+if (valid) {
+  alert("Password is valid ");
+} else {
+  alert("Password is invalid . Please enter a valid password.");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

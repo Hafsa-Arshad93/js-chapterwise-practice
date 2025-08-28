@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+//  CHAPTER 17 TO 20 :
+        //  ARRAYS AND LOOP 
+
+   // Example 1
+
+//  Topic: Multidimensional Arrays – Creating an Empty Array
+// Question: Declare and initialize an empty multidimensional array (Array of arrays).
+
+let multiArray = [[], [], []];  
+
+console.log(multiArray);
+
+
+//         // Example 2
+// // Topic: Multidimensional Arrays – Matrix Representation
+// // Question: Declare and initialize a multidimensional array representing the  matrix:
+let matrixArray = [[1,2,3,4],
+                  [5,6,7,8]  ,
+                  [4,3,2,1]  ,
+                  [8,7,6,5]]  
+     console.log(matrixArray);
+
+     
+// //      Example 3
+
+// //  Topic: For Loop – Numeric Counting
+// // Question: Write a program to print numeric counting from 1 to 10.
+
+for (let i = 1; i <= 10; i++) {
+  console.log(i)
+};
+
+
+       // Example 4
+//  Topic: For Loop – Multiplication Table
+
+// Question =>  Write a program to print multiplication table of any 
+// number using for loop. Table number & length should be 
+// taken as an input from user.
+
+let user = prompt("Enter a Number to show its multiplication table");
+let tableLength = prompt("Enter table length")
+for (let i = 1; i <= tableLength; i++) {
+  let  table = user * i
+  document.write(user +" x " + i + " = " + table + " <br>" + " <br>")   
+}
+
+//          Example 5
+//  Topic: For Loop – Printing Array Items
+// Question: Write a program to print items of the following array using a for loop:
+
+fruits = ["apple", "banana", "mango", "orange", "strawberry"]
+ for (let i = 0; i < fruits.length; i++) {
+   document.write(fruits[i]+ " <br>");
+   }
+
+//             Example 6
+
+// Topic: Generating Number Series
+// Question: Generate the following series in your browser:
+
+// Example 6: Generating different series
+
+// a. Counting
+document.write("<b>Counting:</b> ");
+for (let i = 1; i <= 15; i++) {
+    document.write(i + ", ");
+}
+
+// b. Reverse counting
+document.write("<br><b>Reverse Counting:</b> ");
+for (let i = 10; i >= 1; i--) {
+    document.write(i + ", ");
+}
+
+// c. Even numbers
+document.write("<br><b>Even:</b> ");
+for (let i = 0; i <= 20; i += 2) {
+    document.write(i + ", ");
+}
+
+// d. Odd numbers
+document.write("<br><b>Odd:</b> ");
+for (let i = 1; i < 20; i += 2) {
+    document.write(i + ", ");
+}
+
+// e. Series with k
+document.write("<br><b>Series:</b> ");
+for (let i = 2; i <= 20; i += 2) {
+    document.write(i + "k, " + "<br>" );
+   
+}
+
+       // Example 7
+//  Topic: Searching an Item in an Array
+// Question:You have an array 
+// A = [“cake”, “apple pie”, “cookie”, “chips”, “patties”] 
+// Write a program to enable “search by user input” in an 
+// array. 
+// After searching, prompt the user whether the given item is 
+// found in the list or not.
+
+let  bakeryItems = ["cake", "apple","pie", "cookie", "chips", "patties"] ;
+let found = false ;
+let userSearch = prompt("Enter a Item").toLowerCase()
+for (let i = 0; i < bakeryItems.length; i++) {
+ if (userSearch === bakeryItems[i].toLowerCase()) {
+   found = true;
+    document.write(userSearch + " is available at Shelf(index) " + i + " in our bakery. " + "<br>"+ "<br>");
+     
+}
+}
+
+ if (found === false) {
+    document.write("We are sorry, " + userSearch + " is not available in our bakery.");
+}
+
+//        Example 8
+
+// Topic: Finding the Largest Number in an Array
+// Question: Identify the largest number in:
+
+ let numbers = [22,11,33,76,93,45,12];
+ let largestNum = numbers[0];
+
+ for (let i = 0; i < numbers.length; i++) {
+ if  (numbers[i] > largestNum) {
+    largestNum = numbers[i]
+ }
+ } 
+ document.write("Largest Number is " + largestNum +"<br>")
+
+//            Example 9
+
+//  Topic: Finding the Smallest Number in an Array
+// Question: Identify the smallest number in:
+
+let array = [11,99,65,1,25,0];
+let smallestNum = numbers[0];
+
+for (let i = 0; i < array.length; i++) {
+    if (array[i] < smallestNum) {
+        smallestNum = array[i]
+    }}
+    document.write("Smallest Number is " + smallestNum +"<br>")
+
+//            Example 10
+
+     // Question:
+         //  Write a program to print multiples of 5 ranging 1 to 100
+
+   for (let i = 1; i <= 100; i++) {
+    if (i % 5 === 0) {
+    document.write(i + "<br>");
+  }
+}
+
+//           THE END-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</script>
+</html>

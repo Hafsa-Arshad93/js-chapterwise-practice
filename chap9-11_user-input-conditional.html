@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 9 to 11</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //    Chapter 9 to 11 : USER INPUT & CONDITIONAL STATEMENT 
+
+      //  Topic:1  If statement with string comparison
+ let city = prompt("Enter Your City Name :");
+ if (city === "karachi") {
+ alert("Welcome to Karachi:The city of lights");
+}
+// //   Topic 2:  If–else statement with string comparison
+let user =  prompt(" Enter your gender:");
+if (user === "male" ) {
+document.write("You are eligible:");
+} else { document.write("You are not eligible:")
+    
+}
+
+// //  Topic 3 Example
+//      //  if–else if–else statement
+
+let gender = prompt("  Enter your gender:")
+if (gender === "male") {
+    document.write("Passed");
+    } 
+else if (gender === "female") {
+    document.write("Passed with good marks");
+}
+ else {
+    document.write("Invalid input" + "<br>" +"<hr>");
+ }
+
+//           Topic 4 
+//       if–else if–else ladder 
+
+let light = prompt("Enter traffic light").toLowerCase();
+if ( light ===  "orange") {
+    document.write("Be ready");   
+}
+ else if (light === "green") {
+       document.write("Let's go ");   
+ }
+else if (light === 'red') {
+    document.write("Stop")
+    
+} else { 
+    document.write("No color of light exist " + "<br>" +"<hr>")
+}
+
+let fuel =  prompt("Enter remaining fuel ");
+if (fuel < 0.25 ) {
+    document.write("Please refill the fuel in your car" + "<br>" +"<hr>");
+}
+
+//        Topic 5 ( Example a,b,c,d,e)
+//   Topic Name: Conditional Statements (if, comparisons, boolean and string conditions)
+ let a = 4; 
+if (++a === 5){ 
+alert("given condition for variable a is true"); 
+} 
+
+let b = 82; 
+if (b++ === 83){ 
+alert("given condition for variable b is true"); 
+} 
+
+let c = 12; 
+if (c++ === 13){ 
+alert("condition 1 is true"); 
+} 
+if (c === 13){ 
+alert("condition 2 is true"); 
+} 
+if (++c < 14){ 
+alert("condition 3 is true"); 
+} 
+if(c === 14){ 
+alert("condition 4 is true"); 
+} 
+ 
+// Topic 5 (d)
+ var materialCost = 20000; 
+var laborCost = 2000; 
+var totalCost = materialCost + laborCost; 
+if (totalCost === laborCost + materialCost){ 
+alert("The cost equals"); 
+}
+
+// Topic 5 (e)
+
+ if (true){ 
+alert("True"); 
+} 
+if (false){ 
+alert("False"); 
+}
+ // Topic 5 (f)
+
+ if("car" < "cat"){ 
+alert("car is smaller than cat");  //JavaScript compares strings 
+// lexicographically (dictionary order),
+} 
+
+//                Topic 6 :  User Input & Arithmetic Operations
+      
+//    EXAMPLE : Write a program to take input the marks obtained in three 
+//         subjects & total marks. Compute & show the resulting 
+//         percentage on your page. Take percentage & compute grade .
+         
+
+let marks1 = +prompt("Enter your marks of subject 1");
+let marks2 = +prompt("Enter your marks of subject 2 ");
+let marks3 = +prompt("Enter your marks of subject 3");
+let totalMarks = +prompt("Enter your total marks");
+let obtainedMarks = (marks1 + marks2 + marks3);
+let percentage = (obtainedMarks / totalMarks) *100;
+
+
+let grade;
+let remarks;
+
+if (percentage >=  80 ) {
+    grade = "A1";
+    Remarks = "Exellent";
+}
+else if ( percentage >= 70) {
+    grade = "A";
+    Remarks = "Good";
+}
+ else if (percentage >= 60) {
+    grade = "B";
+    Remarks = "You need to improve";
+ }
+ else if ( percentage >= 50 ) {
+    grade ="Fail";
+    Remarks = "Sorry";
+ }
+ else {
+     grade ="Cannot  access your result";
+    Remarks = "Sorry";
+ }
+ 
+ 
+document.write(" <h1>Mark Sheet  <\h1>" );
+document.write("Total Marks = " + totalMarks  + "<br>");
+document.write(" Obtained Marks = " + obtainedMarks  + "<br>" );
+document.write(" Percentage :" + percentage.toFixed(2)  + "%" + "<br>" );
+document.write(" Grade :" + grade + "<br>" );
+document.write(" Remarks :" + Remarks  + "<br>" );
+
+// TOPIC 7:  Guess game
+// EXAMPLE : Store a secret number (ranging from 1 to 10) in a variable. 
+// Prompt user to guess the secret number. 
+// a. If user guesses the same number, show “Bingo! Correct 
+// answer”. 
+// b. If the guessed number +1 is the secret number, show 
+// “Close enough to the correct answer
+
+let secretNumber = 5;
+let userGuess = +prompt("guess the secret number").trim();
+if (userGuess === secretNumber) {
+   document.write("Bingo! Correct answer. ")   
+}
+else if ( userGuess +1 === secretNumber || userGuess - 1 ===secretNumber) {
+     document.write ("Close enough to the correct answer")
+}
+else {
+     document.write(" SORRY!! Try Again:")
+}
+
+//      Topic 8 
+// Write a program to check whether the given number is 
+// divisible by 3. Show the message to the user if the number is divisible by 3.
+
+let number = prompt("Enter number to check whether it is divisble by 3 or not . ")
+if (number  % 3 === 0) {
+    alert("The number is divisible by 3");
+}
+else{
+    alert("The number is NOT divisible by 3")
+ };    
+//        Topic 9
+//  Write a program that checks whether the given input is an even number or an odd number.
+
+let input = prompt("Enter Number");
+
+if (input % 2 === 0) {
+    alert("Even Number");
+}
+else {
+    alert("Odd number")
+}
+
+//   Topic 10 
+// Write a program that takes temperature as input and shows a message based on following criteria 
+// a. T > 40 then “It is too hot outside.” 
+// b. T > 30 then “The Weather today is Normal.” 
+// c. T > 20 then “Today’s Weather is cool.” 
+// d. T > 10 then “OMG! Today’s weather is so Cool.”
+
+let temp = +prompt("Enter the temperature in °C:");
+
+if (temp > 40) {
+    alert("It is too hot outside.");
+} else if (temp > 30) {
+    alert("The Weather today is Normal.");
+} else if (temp > 20) {
+    alert("Today’s Weather is cool.");
+} else if (temp > 10) {
+    alert("OMG! Today’s weather is so Cool.");
+} else {
+    alert("It is very cold outside.");
+}
+
+        //  Topic 10 
+// Write a program to create a calculator for +,-,*, / & % 
+// using if statements. Take the following input: 
+// a. First number 
+// b. Second number 
+// c. Operation (+, -, *, /, %) 
+// Compute & show the calculated result to user.
+
+let firstNumber = +prompt("Enter 1st number ");
+let secondNumber = +prompt("Enter 2nd number ");
+let operation = prompt("Enter operation ");
+
+let result;
+if (operation === "+" ) {
+    result = firstNumber + secondNumber;
+    
+}
+else if ( operation === "-") {
+    result = firstNumber - secondNumber
+    
+}
+else if ( operation === "*") {
+    result = firstNumber * secondNumber
+    
+}
+else if ( operation === "/") {
+    result = firstNumber / secondNumber
+    
+}
+else {
+    result = "Invalid operation"
+}
+ alert("Result:  " +  result);
+
+
+
+              //  THE END 
+
+
+</script>
+</html>

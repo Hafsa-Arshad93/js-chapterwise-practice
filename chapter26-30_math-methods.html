@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+ <script>
+    // Chapter 26-30:MATH METHODS
+
+//       Question 1: Round, Floor, Ceil of a Positive Integer
+//        Task: Take a positive number from the user and show its
+//     1.Original number
+//     2.Round value
+//     3.Floor value
+//     4.Ceil value
+  
+       let num = +prompt("Enter a positive number:");
+     document.write("Number: " + num + "<br>");
+     document.write("Round off value: " + Math.round(num) + "<br>");
+     document.write("Floor value: " + Math.floor(num) + "<br>");
+    document.write("Ceil value: " + Math.ceil(num) + "<br>");
+
+
+//       Question 2: Round, Floor, Ceil of a Negative Floating Number
+//        Task: Take a  negative decimal number from the user and show its
+//     1.Original number
+//     2.Round value
+//     3.Floor value
+//     4.Ceil value
+    let num1 = +prompt("Enter a negative floating number:");
+
+     document.write("Number: " + num1 + "<br>");
+     document.write("Round off value: " + Math.round(num1) + "<br>");
+     document.write("Floor value: " + Math.floor(num1) + "<br>");
+     document.write("Ceil value: " + Math.ceil(num1) + "<br>");
+
+    //  Question3 : Absolute Value of a Number
+    // Show absolute (positive) value of a number.
+
+
+let num2 = +prompt("Enter a number (positive or negative):");
+
+document.write("Number: " + num2 + "<br>");
+document.write("Absolute value: " + Math.abs(num2) + "<br>");
+
+
+//       Question 4: Simulate a Dice 
+//       Task: Show a random dice value (1 to 6).
+
+
+let dice = Math.floor(Math.random()*6)+1;
+document.write("Dice value: " + dice);
+
+//    Question 5: Simulate a Coin Toss 
+//    Task: Show “Heads” or “Tails” randomly.
+
+  let coinToss = Math.floor(Math.random()*2 )+1;
+   let tossResult;
+  if (coinToss===1) {
+    tossResult = "You got Head " ;  
+};
+
+if ( coinToss === 2) {
+    tossResult = "You got Tail";
+    
+} ;
+ document.write("Coin Toss: " + coinToss +"<br>");
+  document.write("  Toss Result: " + tossResult  +"<br>");
+
+    
+
+//     6:  Random Number Between 1–100 
+//      Show any number from 1 to 100.
+
+     let randomNum = Math.floor(Math.random() * 100) + 1;
+     document.write("Random number between 1 and 100: " + randomNum  +"<br>");
+
+
+//         Question 7:
+//     Parse the User’s Weight 
+//    Ask user for weight, accept different formats like:
+
+       let weightInput = prompt("Enter your weight:");
+       let weight = parseFloat(weightInput);
+      document.write("The weight of user is " + weight + " kilograms" +"<br>" );
+//      parseFloat(weightInput) = Reads only the number part of the string.
+//      parseFloat is very useful when the input has both numbers + text.
+
+//            Question 8:
+//  Write a program that stores a random secret number from 1 to 10 in a
+//  variable. Ask the user to input a number between 1 and 10. If the user
+//  input equals the secret number, congratulate the user. 
+
+let number = 9;
+let guess = +prompt("Enter The Secret Number Between 1-10");
+if (guess === number) {
+    alert("Congratulations! You guessed right!")
+}
+else{
+    alert("Try Again");
+};
+      
+
+</script>
+</html>

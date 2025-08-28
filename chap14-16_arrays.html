@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14 to 17</title>
+</head>
+<body>
+    
+</body> <script>
+                  // Chapter 14 to 17
+// Example 1:
+// Declare an empty array using JS literal notation to store student names in future. 
+      
+let studentName = [];
+
+// Example 2:
+//  Declare an empty array using JS object notation to store student names in future. 
+let studentNames = new Array();
+
+// Example 3:
+//  Declare and initialize a strings array.
+let fruits = ["Apple", "Banana", "Mango"];
+
+// Example 4:
+//  Declare and initialize a numbers array.
+let numbers = [10, 20, 30, 40];
+
+// Example 5:
+//  Declare and initialize a boolean array
+
+let booleans = [true, false, true, false];
+
+// Example 6:
+    //  Declare and initialize a mixed array.
+    let mixedArray = ["Hello", 42, true, null, "World"];
+
+// Example 7:
+//   Declare and Initialize an array and store available education qualifications 
+//   in Pakistan (e.g. SSC, HSC, BCS, BS, BCOM, MS, M. Phil., PhD). 
+//   Show the listed qualifications in your browser
+
+let qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M. Phil.", "PhD"];
+document.write("<h3>Qualifications in Pakistan:<\h3>")
+
+    for (let i = 0; i < qualifications.length; i++) {
+        document.write (i+1 + ")" + qualifications[i] +"<br>")
+        }
+
+// Example 8: Write a program to store 3 student names in an array.Take 
+// another array to store score of these three students. 
+// Assume that total marks are 500 for each student, display 
+// the scores & percentages of students .
+
+let arry1 = ["Aliya","Smith","Asfah"];
+let arry2 = [450,444,340];
+let totalMarks = 500;
+
+document.write("<h2>Student Scores & Percentages</h2>")
+for (let i = 0; i < arry1.length; i++) {
+let percentage = (arry2[i] / totalMarks)*100
+document.write("Score of "+ arry1[i] + " is " + arry2[i] + " and " + percentage.toFixed(2) +"%" +"<br>") 
+}
+
+// Example 9
+// Write a program to store student scores in an array & 
+// sort the array in ascending order using Array’s sort method
+
+  let scores = [320 , 230 , 480 , 120 ];
+  document.write("Scores of Students: " + scores +"<br>");
+  
+  scores.sort(function compareNumbers(a,b) {
+    return a -b;
+  });
+document.write("Ordered Scores of Students: " + scores +"<br>");
+
+// Example 10:
+// Write a program to initialize an array with city names. 
+// copy 3 array elements from cities array to selectedCities array.
+
+let cities = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+
+let selectedCities = cities.slice(1, 4,);
+document.write("Cities list: " + cities + "<br>");
+document.write("Selected cities list: " + selectedCities  +"<br>");
+
+
+
+// Exampe 11
+// Write a program to create a single string from the below mentioned array: 
+//  var arr = [“This ”, “ is ”, “ my ”, “ cat”]; 
+
+ let arr = ["This","is", 'my', "cat"]; 
+ document.write('ARRAY' + "<br>" +"<br>");
+
+document.write(arr + "<br>"+"<br>");
+
+let result = arr.join(" "); // space between words
+ document.write("STRING :" + "<br>" +"<br>");
+
+document.write(result +"<br>" +"<br>"  );
+
+// Extra points
+arr.join(" "); // "This is my cat"
+arr.join("-"); // "This-is-my-cat"
+arr.join("");  // "Thisismycat"
+
+//  Exampe 12
+// Create a new array. Store values one by one in such a way that you can
+//  access the values in the order in which they were stored. (FIFO-First In First Out) 
+
+let newArry = [];
+newArry.push("Apple");
+newArry.push("Pineapple");
+newArry.push("RedApple");
+document.write("newArry after adding values:", newArry +"<br>");
+ newArry.shift()
+document.write("newArry after shift ():", newArry +"<br>");
+ newArry.shift()
+document.write("newArry after 2nd shift ():", newArry +"<br>" +"<br>");
+// Key Points:
+// push() - adds at the end.
+// shift() - removes from the start.
+// Order is maintained: first added - first removed.
+
+//   Exampe 13
+//  Create a new array. Store values one by one in such a way 
+// that you can access the values in reverse order. (Last InFirst Out) 
+
+let fruit = [];
+fruit.push("Apple");
+fruit.push("Pineapple");
+fruit.push("RedApple");
+document.write("Fruit array after adding fruits:", fruit +"<br>");
+ fruit.pop()
+document.write("fruit array after pop ():", fruit+"<br>");
+ fruit.pop()
+document.write("fruit array after 2nd pop ():", fruit+"<br>" +"<br>");
+
+// Exampe 14
+
+// Step 1: Store phone manufacturers in an array
+var phoneManufacturers = ["Apple", "Samsung", "Motorola", "Nokia", "Sony", "Haier"];
+
+// Step 2: Start the <select> dropdown
+document.write('<select>');
+
+// Step 3: Loop through the array and create <option> for each manufacturer
+for (var i = 0; i < phoneManufacturers.length; i++) {
+    document.write('<option>' + phoneManufacturers[i] + '</option>');
+}
+
+// Step 4: Close the <select> tag
+document.write('</select>' +"<br>" +"<br>" );
+
+
+//  The end-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
